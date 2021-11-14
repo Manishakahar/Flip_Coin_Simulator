@@ -13,14 +13,19 @@ do
 	else
 		tails=$((tails+1))
 	fi
-done
 
-	if(($heads>$tails))
+	diff=$((heads-tails))
+
+	if(($heads==21))
 	then
-		echo "Heads won by total count: " $heads
-	else
-		echo "tails won by total count: " $tails
+		echo "Head has won by" $diff
+	break
+	elif(($tails==21))
+	then
+		echo "Tails has won by" $diff
+	break
 	fi
+done
 }
 
 #!Calling Function
